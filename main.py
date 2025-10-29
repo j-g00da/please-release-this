@@ -61,11 +61,11 @@ def check_project_name(name: str) -> None:
     for project in projects:
         pep426_other = normalize_pep426_name(project["name"])
         if pep426_name == pep426_other:
-            raise Exception(f"PEP426 name check failed, collision with {project['name']}r (pep426-normalized to {pep426_name}r)")
+            raise Exception(f"PEP426 name check failed, collision with {project['name']!r} (pep426-normalized to {pep426_name!r})")
 
         ultranormalized_other = ultranormalize_name(project["name"])
         if ultranormalized_name == ultranormalized_other:
-            raise Exception(f"ultranormalized name check failed, collision with {project['name']}r (ultranormalized to {ultranormalized_name}r)")
+            raise Exception(f"ultranormalized name check failed, collision with {project['name']!r} (ultranormalized to {ultranormalized_name!r})")
     print("Ok.")
 
     # typo-squatting check
@@ -73,7 +73,7 @@ def check_project_name(name: str) -> None:
     # we are using here a hardcoded list instead
     print("Checking for typos against top dependents corpus...")
     if typo_check_match := typo_check_name(canonicalize_name(name), _TOP_PROJECT_NAMES):
-        raise Exception(f"typo check failed, {typo_check_match[0]}r matches {typo_check_match[1]}r.")
+        raise Exception(f"typo check failed, {typo_check_match[0]!r} matches {typo_check_match[1]!r}.")
     print("Ok.")
 
     print(f"Congratulations! Your package name {name} survived.")
