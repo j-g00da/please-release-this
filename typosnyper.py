@@ -1,5 +1,6 @@
 # Code in this file was copied directly from PyPI warehouse source
 # https://github.com/pypi/warehouse/blob/691680fa603cce2375505b3b265fe72c0e5ca451/warehouse/packaging/typosnyper.py
+# Licensed under Aparche 2.0
 
 """
 TypoSnyper [sic]
