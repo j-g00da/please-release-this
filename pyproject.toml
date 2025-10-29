@@ -1,0 +1,10 @@
+[project]
+name = "please-release-this"
+version = "0.1.0"
+description = "Can I release this please?"
+requires-python = ">=3.13"
+dependencies = [
+    "packaging>=25.0",
+    "requests>=2.32.5",
+    "stdlib-list>=0.12.0",
+]
